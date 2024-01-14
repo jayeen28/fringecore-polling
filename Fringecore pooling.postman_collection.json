@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "b742eb54-4b7a-4688-88fb-367b74d366b8",
+		"name": "Fringecore pooling",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18984701"
+	},
+	"item": [
+		{
+			"name": "Push key",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"message\":\"Be motivated like the falcon, hunt gloriously.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:3031/push?key=falcon",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "3031",
+					"path": [
+						"push"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "falcon"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
