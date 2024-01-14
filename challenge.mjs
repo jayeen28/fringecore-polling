@@ -28,6 +28,7 @@ export async function blockingGet(key) {
             emitter.on(queueId, (data) => {
                 clearTimeout(timeout);//cleared it so that it doesn't get resolved when key pushed at the closest end of the time limit.
                 removeQueueId(key, queueId);
+                emitter.off(queueId, () => { });
                 r(data);
             });
 
