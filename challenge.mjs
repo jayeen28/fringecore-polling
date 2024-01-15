@@ -21,8 +21,9 @@ export async function blockingGet(key) {
         return new Promise((r) => {
 
             const timeout = setTimeout(() => {
-                r(null);
+                removeQueueId(key, queueId);
                 emitter.off(queueId, () => { });
+                r(null);
             }, TIMEOUT);
 
             emitter.on(queueId, (data) => {
